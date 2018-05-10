@@ -1,0 +1,18 @@
+
+Qpca2:
+Number of eigenvectors we need to get accounted for 90% accuracy is 82 and for 95% accuracy we need 136 eigenvectors.
+We do this by calculation the sum of eigenvalues for top n eigenvectors and divide it by the total sum of all eigenvalues which is total varience. The results are:
+count : 82
+accuracy: 0.9001006829702747
+count : 136
+accuracy: 0.9504000612786303
+
+
+Qpca3:
+Few of them resembles like digit. They are fuzzy because by projecting the dataset onto its top 50 eigenvector gives an accuracy of 82.7% of the total varience of the data. So it is understandable that the images are fuzzy because we are not representing the finer details of the data.
+
+
+
+Qnn1.4:
+When initializing the weight matrix in some cases it may be appropriate to initialize the entries as small random numbers rather than zero. This is a good idea because in cases where their is no bias or bias = 0 the each hidden unit will give output w.x + b as zero and if we have an activation function like tanh or RElu then the output of that layer will be all zeros. So the neural network will learn nothing. In order to prevent this we take small random numbers for initialization.
+
